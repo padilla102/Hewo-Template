@@ -1,0 +1,39 @@
+/*Logo*/
+h1 {
+	margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+.header {
+	border-bottom: 1px solid;
+	padding: 30px 0;
+	text-align: center;
+}
+.header .logo {
+	font-size: 78px;
+	letter-spacing: 3px;
+	line-height: 1;
+	margin: 0 0 10px;
+}
+.header .tagline {
+	font-size: 14px;
+	margin: 0;
+}
+.header .tagline::before {
+	background: transparent url("./images/patern-1.png") no-repeat scroll right center;
+	content: "";
+	display: inline-block;
+	height: 10px;
+	margin-right: 10px;
+	width: 30px;
+}
+.header .tagline::after {
+	background: transparent url("./images/patern-1.png") no-repeat scroll right center;
+	content: "";
+	display: inline-block;
+	height: 10px;
+	margin-left: 10px;
+	width: 30px;
+}

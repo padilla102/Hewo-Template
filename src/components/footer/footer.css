@@ -1,0 +1,95 @@
+
+.bottom-logo {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.bottom-logo h1.logo {
+    font-size: 40px;
+    margin: 0;
+}
+.bottom-logo .social ul, .post-share ul {
+    display: inline;
+}
+.bottom-logo .social::before,
+.post-share::before {
+	background: rgba(0, 0, 0, 0) url("./images/patern-1.png") no-repeat scroll right center;
+	content: "";
+	display: inline-block;
+	height: 10px;
+	margin-right: 10px;
+	width: 30px;
+}
+.bottom-logo .social::after,
+.post-share::after {
+	background: rgba(0, 0, 0, 0) url("./images/patern-1.png") no-repeat scroll right center;
+	content: "";
+	display: inline-block;
+	height: 10px;
+	margin-left: 10px;
+	width: 30px;
+}
+.bottom-logo .social ul,
+.post-share ul {
+	display: inline;
+}
+.bottom-logo .social li,
+.post-share li {
+	display: inline-block;
+	margin: 30px 4px 0 4px;
+}
+.bottom-logo .social li a,
+.post-share li a {
+	border: 1px solid #333;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+.bottom-logo .social li a:hover,
+.post-share li a:hover {
+	background: #333;
+	transition-duration: .2s;
+}
+
+.bottom-logo .social li a:hover i,
+.post-share li a:hover i {
+	color: #fff;
+}
+.bottom-logo .social li a i,
+.post-share li a i {
+	transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+}
+.coppyright {
+	text-align: center;
+	padding: 0 0 30px 0;
+}
+
+.post-share li.facebook a, .bottom-logo .social li.facebook a:hover {
+	background: #3b5998 none repeat scroll 0 0; border-color: #3b5998;
+}
+.post-share li.twitter a, .bottom-logo .social li.twitter a:hover {
+	background: #55acee none repeat scroll 0 0; border-color: #55acee;
+}
+.post-share li.google-plus a, .bottom-logo .social li.google-plus a:hover {
+	background: #dd4b39 none repeat scroll 0 0; border-color: #dd4b39;
+}
+.post-share li.instagram a, .bottom-logo .social li.instagram a:hover {
+	background: #cc2127 none repeat scroll 0 0; border-color: #cc2127;
+}
+
+/*boostrap*/
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}

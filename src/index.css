@@ -1,13 +1,132 @@
+/***
+Theme Name:		HeWo
+Theme URI:		http://demos.alithemes.com/html/hewo
+Description:	Modern Newspaper HTML Template
+Author:			alithemes.com
+Author URI:		http://alithemes.com
+Version:		1.2
+License:		GNU General Public License v2 or later
+License URI:	http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+	HEADER
+		Topbar
+		Logo
+		Navigation
+		Spinner loading
+	FEATURED POST
+		Slider carausel
+		Slider fade
+		Slideshow big
+		Featured Grid
+		Recent post section
+	WIDGETS
+		Custom menu
+		Latest style 1
+		Latest style 2
+		Latest style 3
+		Search form
+		Tags
+		Pagination
+	BOTTOM
+	OFFCANVAS
+	FOOTER
+		Gototop
+		Search popup
+	HOME PAGE
+		Boxed layout
+		Home Grid 1
+	ARCHIVE LAYOUT
+		Archive list
+		Archive grid blance
+		Archive list big
+	POST STYLE
+		Comment
+	PAGES
+		Author page
+	HELPER
+		Row and column gap
+		Line
+==============================
+NOTE
+	Primary color: #e5633f;
+	Body font: 'IBM Plex Serif',serif;
+	Heading font: 'Playfair Display', serif;
+***/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background: #ffffff none repeat scroll 0 0;
+	color: #000000;
+	font-family: 'IBM Plex Serif', serif;
+	font-weight: 400;
+	line-height: 1.4;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+strong {
+	font-weight: 500;
+}
+.aligncenter,
+img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*COLOR*/
+.main_nav,
+.header,
+.top_bar {
+	border-color: #000000 !important;
+}
+a:focus,
+a:hover,
+.top_bar .social a:hover i,
+.post_meta span a:hover,
+.alith_post_content_big_caption a:hover,
+a.link-active,
+.sticky .alith_post_title a {
+	color: #e5633f;
+	text-decoration: none;
+}
+::selection {
+	background: #000;
+	/* WebKit/Blink Browsers */
+	color: #fff;
+}
+::-moz-selection {
+	background: #000;
+	/* Gecko Browsers */
+	color: #fff;
+}
+.alith_tagg:hover,
+.alith_tagg:focus {
+	background: #e5633f;
+}
+/*Fonts*/
+.post_meta_categories_label,
+.header .logo,
+.alith_heading_patern_2,
+.bottom-logo h1.logo,
+#slideshow_big .alith_post_title,
+.archive-title,
+.post_list_big .alith_post_title,
+.post-content .alith_post_title,
+.single-content h1,
+.single-content h2,
+.single-content h3,
+.single-content h4,
+.single-content h5,
+.single-content h6,
+.dropcap p:first-child::first-letter,
+.single-comment-title,
+.comment-reply-title {
+	font-family: 'Playfair Display', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*OFFCANVAS*/
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
 }
