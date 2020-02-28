@@ -21,7 +21,7 @@
 	text-transform: uppercase;
 }
 .main_nav_cover #main-menu li ul.sub-menu a {
-	/* text-transform: none; */
+	text-transform: none; 
 }
 ul.sub-menu {
 	/* display: none; */

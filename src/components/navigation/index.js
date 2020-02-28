@@ -58,16 +58,18 @@ export class Navigation extends Component {
                                     onMouseEnter={this.toggleSubMenuHomeEnter}
                                     onMouseLeave={this.toggleSubMenuHomeLeave}>
                                         <Link to="#">Home</Link>
+                                        
                                         <Transition
                                             native
                                             items={this.state.subMenuHome}
-                                            from={{ opacity: 1}}
-                                            enter= {{ opacity: 1 }}
-                                            leave={{ opacity: 0 }}
+                                            from={{ opacity: 0, visibility: 'hidden',  transform: 'translate3d(0, -20px, 0)' }}
+                                            enter={{ opacity: 1, visibility: 'visible', transform: 'translate3d(0,0px,0)' }}
+                                            leave={{ opacity: 0, visibility: 'hidden', transform: 'translate3d(0, -20px, 0)' }}
+                                            config={{ duration: 500 }}
                                         >
                                             {show => show && (props =>(
                                                 <animated.ul style={props}>
-                                                    <ul class="sub-menu">
+                                                    <ul class="sub-menu">         
                                                         <li><Link to="#">Default</Link></li>
                                                         <li><Link to="#">Grid</Link></li>
                                                         <li><Link to="#">Big slide</Link></li>
@@ -77,7 +79,7 @@ export class Navigation extends Component {
                                                     </ul>
                                                 </animated.ul>
                                             ))}
-                                        </Transition>  
+                                        </Transition>
                                     </li>
                                     <li class="menu-item-has-children"
                                         onMouseEnter={this.toggleSubMenuLayoutEnter}
@@ -86,11 +88,11 @@ export class Navigation extends Component {
                                         <Transition
                                             native
                                             items={this.state.subMenuLayout}
-                                            from={{ opacity: 1}}
-                                            enter= {{ opacity: 1}}
-                                            leave={{ opacity: 0}}
+                                            from={{ opacity: 0, visibility: 'hidden',  transform: 'translate3d(0, -20px, 0)' }}
+                                            enter={{ opacity: 1, visibility: 'visible', transform: 'translate3d(0,0px,0)' }}
+                                            leave={{ opacity: 0, visibility: 'hidden', transform: 'translate3d(0, -20px, 0)' }}
                                         >
-                                            {show => show && (props =>(
+                                            {subMenuLayout => subMenuLayout  && (props =>(
                                                 <animated.ul style={props}>
                                                     <ul class="sub-menu">
                                                         <li><Link to="#">List</Link></li>
@@ -111,9 +113,9 @@ export class Navigation extends Component {
                                         <Transition
                                             native
                                             items={this.state.subMenuEntertainment}
-                                            from={{ opacity: 1}}
-                                            enter= {{ opacity: 1 }}
-                                            leave={{ opacity: 0 }}
+                                            from={{ opacity: 0,  transform: 'translate3d(0, -20px, 0)' }}
+                                            enter={{ opacity: 1, transform: 'translate3d(0,0px,0)' }}
+                                            leave={{ opacity: 0, transform: 'translate3d(0, -20px, 0)' }}
                                         >
                                             {show => show && (props =>(
                                                 <animated.ul style={props}>
