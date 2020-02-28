@@ -1,0 +1,1 @@
+export { GotoTop } from "./goto-top";

@@ -1,0 +1,45 @@
+.gototop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease
+}
+.gototop.active {
+	opacity: 1;
+	visibility: visible
+}
+.gototop a {
+	background: rgba(0, 0, 0, 0) url("./images/icon-up.png") no-repeat scroll center top;
+	display: table;
+	font-size: 12px;
+	height: 40px;
+	padding-top: 30px;
+	text-align: center;
+	width: 40px;
+	transition-duration: .2s;
+}
+.gototop a i {
+	height: 50px;
+	display: table-cell;
+	vertical-align: middle
+}
+.gototop a:hover,
+.gototop a:active,
+.gototop a:focus {
+	text-decoration: none;
+	outline: none
+}
+.gototop:hover a {
+	padding-top: 35px;
+	transition-duration: .2s;
+}
+.js .animate-box {
+	opacity: 0
+}

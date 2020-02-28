@@ -1,0 +1,1 @@
+export { HomeBoxed } from "./home-boxed";
