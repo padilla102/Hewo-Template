@@ -74,8 +74,8 @@ export class Topbar extends Component {
                                     leave={{ opacity: 0 }}
                                 >
                                     {show => show && (props => (
-                                        <animated.div style={props}>
-                                            <div class="top-search-form">
+                                        <animated.div style={props} class="top-search-form">
+                                            
                                                 <Form class="search-form" method="get" role="search">
                                                     <Form.Group controlId="formBasicEmail">
                                                         <Form.Label>Search for:</Form.Label>
@@ -83,7 +83,7 @@ export class Topbar extends Component {
                                                         </Form.Text>
                                                     </Form.Group>
                                                 </Form>
-                                            </div>
+                                           
                                         </animated.div>
                                     ))}
                                 </Transition>

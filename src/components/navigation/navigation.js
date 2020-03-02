@@ -3,78 +3,139 @@ import { Link } from 'react-router-dom';
 // import { Transition, animated } from "react-spring/renderprops";
 import "./navigation.css"
 
+const menu = [
+    {
+        name:'Home',
+        to: '#'
+        // subMenu: [
+        //     { name: 'Default', to: '#'},
+        //     { name: 'Grid', to: '#', subMenu: [] },
+        //     { name: 'Big slide', to: '#', subMenu: []  },
+        //     { name: 'Carausel', to: '#', subMenu: [] },
+        //     { name: 'Boxed layout', to: '#', subMenu: []  },
+        //     { name: 'RTL layout', to: '#', subMenu: []  }
+        // ]
+    },
+    {
+        name:'Layout',
+        to: '#',
+        subMenu: [
+            { name: 'Category', to: '#', subMenu: [
+                { name: 'List', to: '#', subMenu: []},
+                { name: 'Grid', to: '#', subMenu: [] },
+                { name: 'Masonry', to: '#', subMenu: [] },
+                { name: 'Big', to: '#', subMenu: []  }
+            ]},
+            { name: 'Posts', to: '#', subMenu: [
+                { name: 'Default', to: '#', subMenu: []},
+                { name: 'Video', to: '#', subMenu: [] },
+                { name: 'Audio', to: '#', subMenu: [] },
+                { name: 'Gallery', to: '#', subMenu: []  },
+                { name: 'Image', to: '#', subMenu: []  }
+            ] },
+            { name: 'Pages', to: '#', subMenu: [
+                { name: 'Author', to: '#', subMenu: []},
+                { name: 'Search', to: '#', subMenu: [] },
+                { name: '404', to: '#', subMenu: [] },
+                { name: 'Contact', to: '#', subMenu: []  },
+                { name: 'Typography', to: '#', subMenu: []  }
+            ]  }
+        ]
+    }, 
+    {
+        name:'News',
+        to: '#',
+        subMenu: []
+    }, 
+    {
+        name:'Economy',
+        to: '#',
+        subMenu: []
+    }, 
+    {
+        name:'Entertainment',
+        to: '#',
+        subMenu: []
+    }, 
+    {
+        name:'Jobs',
+        to: '#',
+        subMenu: []
+    }      
+];
+
 export class Navigation extends Component {
+    state = {
+        scrolled: true
+    }
+
+    componentDidMount(){
+        window.addEventListener('scroll', () => {
+            if (window.scrollY < 200) {
+                this.setState({scrolled: true});
+            }
+            else{
+                this.setState({scrolled: false});
+            }
+        })
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll');
+    }
+
+    renderMainMenu = items =>{
+        console.log(items)
+        if (items.length > 0 ){
+            return (
+                <ul id="main-menu">
+                    {items.map((item) => {
+                        return ((item.subMenu) ?
+                        <li class={item.subMenu.length > 0 ? "menu-item-has-children": ""}>
+                            <Link to={item.to}>{item.name}</Link>
+                                {this.renderList(item.subMenu)}
+                        </li> 
+                        :
+                        <li >
+                            <Link to={item.to}>{item.name}</Link>
+                        </li>
+                    )})}
+                </ul>
+            )
+        }
+        
+    }
+
+    renderList = items => {
+        console.log("list", items)
+        if (items.length > 0 ) {
+            return (
+                <ul class="sub-menu fadeInMenu animated">
+                    {items.map((item) => { 
+                        return ( (item.subMenu) ? 
+                        <li class={item.subMenu.length > 0 ? "menu-item-has-children": ""}>
+                            <Link to={item.to}>{item.name}</Link>
+                            {this.renderList(item.subMenu)}
+                        </li> :
+                        <li >
+                            <Link to={item.to}>{item.name}</Link>
+                        </li>
+                    )
+                })}
+                </ul>
+            )
+        }
+    }
+
     render() {
+
         return (
-            <div class="main-nav section_margin">
+            <div class={this.state.scrolled ? 'main-nav section_margin' : 'main-nav section_margin smartnav'}>
                 <div class="container-fluid">
                     <div class="container">
                         <div class="row">
-							<div class="col-12 col-md-12 main_nav_cover" id="nav">
-                                <ul id="main-menu">
-                                    <li class="menu-item-has-children">
-                                        <Link to="#">Home</Link>
-                                        <ul class="sub-menu fadeInMenu animated">         
-                                            <li><Link to="/">Default</Link></li>
-                                            <li><Link to="/home-grid">Grid</Link></li>
-                                            <li><Link to="/home-slide">Big slide</Link></li>
-                                            <li><Link to="/home-carausel">Carausel</Link></li>
-                                            <li><Link to="/home-boxed">Boxed layout</Link></li>
-                                            <li><Link to="/home-rtl">RTL layout</Link></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="menu-item-has-children">
-                                        <Link to="#">Layout</Link>
-                                        <ul class="sub-menu fadeInMenu animated">  
-
-                                            <li class="menu-item-has-children">
-                                                <Link to="#">Category</Link>
-                                                <ul class="sub-menu">         
-                                                    <li><Link to="/">List</Link></li>
-                                                    <li><Link to="/">Grid</Link></li>
-                                                    <li><Link to="/">Masonry</Link></li>
-                                                    <li><Link to="/">Big</Link></li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <Link to="/">Posts</Link>
-                                                {/* <ul class="sub-menu fadeInMenu animated">         
-                                                    <li><Link to="/">List</Link></li>
-                                                    <li><Link to="/">Grid</Link></li>
-                                                    <li><Link to="/">Masonry</Link></li>
-                                                    <li><Link to="/">Big</Link></li>
-                                                </ul> */}
-                                            </li>
-
-                                            <li >
-                                                <Link to="/">Pages</Link>
-                                                {/* <ul class="sub-menu fadeInMenu animated">         
-                                                    <li><Link to="/">List</Link></li>
-                                                    <li><Link to="/">Grid</Link></li>
-                                                    <li><Link to="/">Masonry</Link></li>
-                                                    <li><Link to="/">Big</Link></li>
-                                                </ul> */}
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><Link to="/">News</Link></li>
-                                    <li><Link to="/">Economy</Link></li>
-
-                                    <li class="menu-item-has-children">
-                                        <Link to="#">Entertainment</Link>
-                                        <ul class="sub-menu fadeInMenu animated">         
-                                            <li><Link to="/">Festival</Link></li>
-                                            <li><Link to="/">Music</Link></li>
-                                            <li><Link to="/">Movie</Link></li>
-                                            <li><Link to="/">Cinema</Link></li>
-                                        </ul>
-                                    </li>
-                                    <li><Link to="/">Jobs</Link></li>
-
-
-                                </ul>
+                            <div class="col-12 col-md-12 main_nav_cover" id="nav">
+                                {this.renderMainMenu(menu)}
                             </div>
                         </div>
                     </div>
