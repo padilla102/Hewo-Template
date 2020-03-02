@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { Topbar } from "../topbar";
 import { Logo } from "../logo";
 import { Navigation } from "../navigation";
@@ -14,25 +14,29 @@ import { HomeRTL } from "../home-rtl";
 
 import "./App.css"
 
+
 export class App extends Component {
+    
     render() {
         return (
             <Router>
-                <div id="page-content-wrapper">
-                    <Topbar />
-                    <Logo />
-                    <Navigation />
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/home-grid" exact component={HomeGrid}/>
-                    <Route path="/home-slide" exact component={HomeSlide}/>
-                    <Route path="/home-carausel" exact component={HomeCarausel}/>
-                    <Route path="/home-boxed" exact component={HomeBoxed}/>
-                    <Route path="/home-rtl" exact component={HomeRTL}/>
 
-                    <Footer />  
-                    <GotoTop />                  
-                </div>
+                <div id="page-content-wrapper">
+                <span id="boookmark1"></span>
+                <Topbar />
+                <Logo />
+                <Navigation />
+                <Route path="/" exact component={Home}/>
+                <Route path="/home-grid" exact component={HomeGrid}/>
+                <Route path="/home-slide" exact component={HomeSlide}/>
+                <Route path="/home-carausel" exact component={HomeCarausel}/>
+                <Route path="/home-boxed" exact component={HomeBoxed}/>
+                <Route path="/home-rtl" exact component={HomeRTL}/>
+                <Footer />  
+                <GotoTop />                  
+            </div> 
             </Router>
+            
         )
     }
 }

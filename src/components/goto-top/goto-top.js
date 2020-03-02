@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './goto-top.css';
 
 export class GotoTop extends Component {
+
+    state = {
+        addClass: false
+    }
+
+    componentDidMount() {
+        document.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                this.setState({ addClass: true })
+            } else {
+                this.setState({ addClass: false })
+            }
+        });
+        window.scrollTo(0, 0);
+    }
+
     render() {
+        let gototopClass = ['gototop'];
+
+        if(this.state.addClass) {
+            gototopClass.push('active');
+        }
+        
         return (
-            <div class="gototop js-top">
-				<Link to="#" class="js-gotop"><span>Take Me Top</span></Link>
-			</div>
+            <div className={gototopClass.join(' ')}>
+                <a href="#root" class="js-gotop"><span>Take Me Top</span></a>
+            </div>
         )
     }
 }

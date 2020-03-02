@@ -43,3 +43,13 @@
 .js .animate-box {
 	opacity: 0
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+	.gototop p span {
+		display: none;
+	}
+}
