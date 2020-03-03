@@ -1,0 +1,75 @@
+#sidebar-wrapper {
+	background: #fff none repeat scroll 0 0;
+	height: 100%;
+	left: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	width: 0;
+	z-index: 1000;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.sidebar-inner {
+	padding: 20px;
+}
+.sidebar-inner h4.widget-title {
+	background: #000 none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#sidebar-wrapper {
+	width: 0;
+}
+
+.boxed #sidebar-wrapper {
+	border-left: 1px solid;
+}
+
+.off-canvas-close {
+	height: 20px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.off-canvas-close span {
+	float: right;
+	padding-right: 25px;
+	position: relative;
+}
+.off-canvas-close span::after,
+.off-canvas-close span::before {
+	background: #000 none repeat scroll 0 0;
+	content: "";
+	height: 2px;
+	position: absolute;
+	right: 0;
+	width: 20px;
+	margin-top: 10px;
+}
+.off-canvas-close span::before {
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+.off-canvas-close span::after {
+	transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+}
+
+@media (min-width: 1170px) {
+    #wrapper.toggled {
+        padding-left: 350px;
+   }
+   .off-canvas-close {display: none;}
+}

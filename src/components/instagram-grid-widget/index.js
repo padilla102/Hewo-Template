@@ -1,0 +1,1 @@
+export { InstagramGridWidget } from "./instagram-grid-widget";

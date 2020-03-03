@@ -1,0 +1,34 @@
+/*latest style 2*/
+.latest_style_2_item_first {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.latest_style_2_item_first h3.alith_post_title {
+	font-size: 18px;
+	font-weight: 300;
+}
+.latest_style_2_item_first {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+.latest_style_2_item {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	position: relative;
+}
+.latest_style_2_item figure {
+	display: block;
+	float: left;
+	margin: 0 15px 0 0;
+	position: relative;
+	width: 35%;
+}
+.latest_style_2_item h3.alith_post_title {
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}

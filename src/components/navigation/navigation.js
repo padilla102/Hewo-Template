@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { Transition, animated } from "react-spring/renderprops";
 import "./navigation.css"
 
 
@@ -26,18 +25,17 @@ export class Navigation extends Component {
     }
 
     renderMainMenu = items =>{
-        console.log(items)
         if (items.length > 0 ){
             return (
                 <ul id="main-menu">
-                    {items.map((item) => {
+                    {items.map((item, index) => {
                         return ((item.subMenu) ?
-                        <li class={item.subMenu.length > 0 ? "menu-item-has-children": ""}>
-                            <Link to={item.to}>{item.name}</Link>
+                        <li key={index} class={item.subMenu.length > 0 ? "menu-item-has-children": ""}>
+                            <Link id={index} to={item.to}>{item.name}</Link>
                                 {this.renderList(item.subMenu)}
                         </li> 
                         :
-                        <li >
+                        <li key={index}>
                             <Link to={item.to}>{item.name}</Link>
                         </li>
                     )})}
@@ -48,18 +46,17 @@ export class Navigation extends Component {
     }
 
     renderList = items => {
-        console.log("list", items)
         if (items.length > 0 ) {
             return (
                 <ul class="sub-menu fadeInMenu animated">
-                    {items.map((item) => { 
+                    {items.map((item, index) => { 
                         return ( (item.subMenu) ? 
-                        <li class={item.subMenu.length > 0 ? "menu-item-has-children": ""}>
+                        <li key={index} class={item.subMenu.length > 0 ? "menu-item-has-children": ""}>
                             <Link to={item.to}>{item.name}</Link>
                             {this.renderList(item.subMenu)}
                         </li> :
-                        <li >
-                            <Link to={item.to}>{item.name}</Link>
+                        <li key={index}>
+                            <Link id={index} to={item.to}>{item.name}</Link>
                         </li>
                     )
                 })}

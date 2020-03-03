@@ -18,11 +18,11 @@ export class Topbar extends Component {
 				<div class="container">
 					<div class="top_bar margin-15">
 						<div class="row">
-							<div class="col-md-6 col-sm-12 time" onClick={this.toggleSearch}>
-								<div id="off-canvas-toggle">
+							<div class="col-md-6 col-sm-12 time">
+								<div id="off-canvas-toggle" onClick={this.props.showSideBar}>
                                     <span></span>
-                                    {/* <p class="sidebar-open">MORE</p> */}
-                                    <p>MORE</p>
+                                    <p class="sidebar-open">MORE</p>
+                                    {/* <p>MORE</p> */}
                                 </div>
 								<i><FaRegClock /></i><span>&nbsp;&nbsp;&nbsp;Friday, 5 January 2018</span>
 							</div>
@@ -39,7 +39,7 @@ export class Topbar extends Component {
                                     <form action="#" class="search-form" method="get" role="search"> 
 										<label> 
 											<span class="screen-reader-text">Search for:</span>
-											<input type="search" name="s" value="" placeholder="Search …" class="search-field"/> 
+											<input type="text" name="s" placeholder="Search …" class="search-field"/> 
 										</label> 
 										<input type="submit" value="Search" class="search-submit"/>
 									</form>

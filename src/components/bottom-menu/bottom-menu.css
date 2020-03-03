@@ -1,0 +1,12 @@
+.bottom_menu {
+	overflow: hidden;
+}
+.bottom_menu li {
+	float: left;
+	margin: 2px 0;
+	width: 50%;
+}
+
+.bottom_menu i svg{
+    width: 0.5em;
+}

@@ -1,0 +1,22 @@
+/*latest style 3*/
+.latest_style_3_item {
+	border-bottom: 1px solid #eee;
+	min-height: 50px;
+	overflow: hidden;
+	padding: 40px 0;
+	position: relative;
+}
+.latest_style_3_item span.item-count {
+	float: left;
+	font-size: 30px;
+}
+.latest_style_3_item .alith_post_title_small {
+	clear: none;
+	float: left;
+	left: 12%;
+	margin-left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 90%;
+}

@@ -1,0 +1,15 @@
+/*latest style 3*/
+.latest_style_3 .latest_style_3_item:last-child {
+	border: none;
+}
+
+/**/
+.vertical-align {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+strong {
+    font-weight: 500 !important;
+}
