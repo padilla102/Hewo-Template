@@ -10,14 +10,7 @@ import { Widget } from "../widget";
 import { Footer } from "../footer";
 import { GotoTop } from "../goto-top";
 
-import { 
-    Home, 
-    HomeBoxed, 
-    HomeCarausel, 
-    HomeGrid, 
-    HomeRTL,
-    HomeSlide
-} from "../home";
+import * as page from "../pages";
 
 import { SpinnerCover } from "../spinner-cover";
 import "./App.css"
@@ -89,7 +82,16 @@ const data = [
 
 export class App extends Component {
     state = {
-        toggled:false
+        toggled:false,
+        showLoading: true
+    }
+
+    componentDidMount(){
+        // setTimeout(() => {
+            this.setState({
+                showLoading:false
+            });
+        //   }, 500)
     }
 
     ShowSidebarWrapper = () => {
@@ -99,7 +101,8 @@ export class App extends Component {
     render() {
         return (
             <Router>
-                <SpinnerCover />
+                <SpinnerCover show = {this.state.showLoading}/>
+                <SpinnerCover show = {this.state.showLoading}/>
                 <div id="wrapper" class={this.state.toggled? 'toggled': null}>
                     <SidebarWrapper/>
                     <div id="page-content-wrapper">
@@ -107,12 +110,12 @@ export class App extends Component {
                         <Topbar showSideBar = {this.ShowSidebarWrapper} />
                         <Logo />
                         <Navigation data={data}/>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/home-grid" exact component={HomeGrid}/>
-                        <Route path="/home-slide" exact component={HomeSlide}/>
-                        <Route path="/home-carausel" exact component={HomeCarausel}/>
-                        <Route path="/home-boxed" exact component={HomeBoxed}/>
-                        <Route path="/home-rtl" exact component={HomeRTL}/>
+                        <Route path="/" exact component={page.Home}/>
+                        <Route path="/home-grid" exact component={page.HomeGrid}/>
+                        <Route path="/home-slide" exact component={page.HomeSlide}/>
+                        <Route path="/home-carausel" exact component={page.HomeCarausel}/>
+                        <Route path="/home-boxed" exact component={page.HomeBoxed}/>
+                        <Route path="/home-rtl" exact component={page.HomeRTL}/>
                         <Widget />
                         <Footer />  
                         <GotoTop />                  

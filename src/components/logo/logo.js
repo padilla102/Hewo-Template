@@ -6,7 +6,7 @@ export class Logo extends Component {
     render() {
         return (
             <div class="container-fluid">
-				<div class="container">
+				<div class="container fadeIn animated-fast">
 					<div class="row">
                         <div class="col-12 col-md-12 header">
                             <h1 class="logo"><Link to="/">HELLO WORLD</Link></h1>

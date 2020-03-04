@@ -15,7 +15,7 @@ export class Topbar extends Component {
     render() {
         return (
             <div class="container-fluid">
-				<div class="container">
+				<div class="container fadeIn animated-fast">
 					<div class="top_bar margin-15">
 						<div class="row">
 							<div class="col-md-6 col-sm-12 time">

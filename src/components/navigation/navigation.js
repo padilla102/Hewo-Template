@@ -70,7 +70,7 @@ export class Navigation extends Component {
         return (
             <div class={this.state.scrolled ? 'main-nav section_margin' : 'main-nav section_margin smartnav'}>
                 <div class="container-fluid">
-                    <div class="container">
+                    <div class="container fadeIn animated-fast">
                         <div class="row">
                             <div class="col-12 col-md-12 main_nav_cover" id="nav">
                                 {this.renderMainMenu(this.props.data)}
