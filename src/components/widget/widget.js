@@ -3,6 +3,7 @@ import { LatestStyle3 } from "../latest-style-3";
 import { LatestStyle2 } from "../latest-style-2";
 import { BottomMenu } from "../bottom-menu";
 import { InstagramGridWidget } from "../instagram-grid-widget";
+import { WidgetTitle } from "../widget-title";
 import './widget.css';
 
 const comments = [
@@ -50,45 +51,29 @@ export class Widget extends Component {
 						<div class="row"> 
 
 							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <div class="sidebar-widget">					
-								    <div class="widget-title-cover">
-                                        <h4 class="widget-title">
-                                            <span>Most comments</span>
-                                        </h4>
-                                    </div>
+                                <div class="sidebar-widget">
+                                    <WidgetTitle title= 'Most comments' />
 								    <LatestStyle3 comments = {comments}/>
                                 </div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="sidebar-widget">					
-									<div class="widget-title-cover">
-                                        <h4 class="widget-title">
-                                            <span>Latest</span>
-                                        </h4>
-                                    </div>
+								<div class="sidebar-widget">
+                                    <WidgetTitle title= 'Latest' />
 									<LatestStyle2 latests = {latests} />
 								</div>
 							</div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="sidebar-widget">					
-									<div class="widget-title-cover">
-                                        <h4 class="widget-title">
-                                            <span>Categories</span>
-                                        </h4>
-                                    </div>
+								<div class="sidebar-widget">		
+                                    <WidgetTitle title= 'Categories' />		
 									<BottomMenu bottomMenu={bottomMenu} />
 								</div>
 							</div>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="sidebar-widget">					
-									<div class="widget-title-cover">
-                                        <h4 class="widget-title">
-                                            <span>Instagram</span>
-                                        </h4>
-                                    </div>
+								<div class="sidebar-widget">	
+                                    <WidgetTitle title= 'Instagram' />
 									<InstagramGridWidget instagramWidget = {instagramWidget}/>
 								</div>
 							</div>

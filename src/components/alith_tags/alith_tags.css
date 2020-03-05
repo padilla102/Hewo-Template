@@ -1,0 +1,25 @@
+.alith_tagg:hover,
+.alith_tagg:focus {
+	background: #e5633f;
+}
+
+/*Tags*/
+.alith_tagg {
+	background: #f1f1f1;
+	padding: 10px 15px;
+	color: #222;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	margin-right: 8px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: inline-block
+}
+.alith_tagg:hover,
+.alith_tagg:focus {
+	color: #fff;
+	text-decoration: none
+}

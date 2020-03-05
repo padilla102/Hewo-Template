@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaRegClock, FaSearch } from "react-icons/fa";
+import { SearchForm } from "../search-form";
 import "./topbar.css";
 
 export class Topbar extends Component {
@@ -36,13 +37,7 @@ export class Topbar extends Component {
                                     <i><FaSearch/></i><span>SEARCH</span>
                                 </div>
                                 <div class={this.state.showForm? "top-search-form show-form" : "top-search-form"}>
-                                    <form action="#" class="search-form" method="get" role="search"> 
-										<label> 
-											<span class="screen-reader-text">Search for:</span>
-											<input type="text" name="s" placeholder="Search …" class="search-field"/> 
-										</label> 
-										<input type="submit" value="Search" class="search-submit"/>
-									</form>
+                                    <SearchForm />
                                 </div>
 							</div>
 						</div>

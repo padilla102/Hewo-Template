@@ -1,0 +1,22 @@
+.latest_style_1_item span.item-count {
+	float: left;
+	font-size: 30px;
+}
+.latest_style_1_item .alith_post_title_small {
+	clear: none;
+	float: left;
+	left: 12%;
+	margin-left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50%;
+	color: #888;
+}
+.latest_style_1_item .alith_news_img {
+	display: block;
+	float: right;
+	margin: 0;
+	position: relative;
+	width: 35%;
+}

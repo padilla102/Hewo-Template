@@ -1,0 +1,1 @@
+export { LatestStyle1 } from "./latest-style-1";

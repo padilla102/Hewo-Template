@@ -1,0 +1,38 @@
+.widget-title-cover {
+    line-height: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+h4.widget-title {
+	font-size: 16px;
+	position: relative;
+	text-transform: uppercase;
+	display: inline-block;
+}
+h4.widget-title::after {
+	background: #000 none repeat scroll 0 0;
+	bottom: 10px;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	left: 100%;
+	position: absolute;
+	width: 100vw;
+}
+h4.widget-title span {
+	padding-left: 15px;
+	padding-right: 10px;
+}
+h4.widget-title span::before {
+	background: #000 none repeat scroll 0 0;
+	border-radius: 50%;
+	content: "";
+	height: 8px;
+	left: 0;
+	margin-top: -4px;
+	position: absolute;
+	top: 50%;
+	width: 8px;
+}

@@ -13,6 +13,9 @@ export class LatestStyle2Item extends Component {
                 <h3 class="alith_post_title">
                     <a href="single.html">{this.props.item.latest}</a>
                 </h3>
+                <div class="post_meta">			
+                    <span class="meta_date">{this.props.item.postDate}</span>
+                </div>
             </div>
         )
     }

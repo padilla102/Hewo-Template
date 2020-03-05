@@ -1,0 +1,14 @@
+/*latest style 1*/
+.latest_style_1_item {
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	padding: 10px 0;
+	position: relative;
+	min-height: 80px;
+}
+.latest_style_1 .latest_style_1_item:last-child {
+	border: none;
+}
+.latest_style_1 .latest_style_1_item:first-child {
+	padding-top: 0;
+}
