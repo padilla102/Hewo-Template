@@ -1,0 +1,1 @@
+export { SliderSmallAlice } from "./slider-small-alice";
